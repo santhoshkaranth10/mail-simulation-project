@@ -5,13 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
 @Entity
 @Table(name="User_Info")
-
+@Component
 public class UserInfo {
 	
-	@Column
 	@Id
+	@Column
 	@GeneratedValue
 	private int id;
 	@Column
@@ -44,9 +46,4 @@ public class UserInfo {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-
-
-
 }
